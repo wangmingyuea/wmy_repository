@@ -1,0 +1,17 @@
+# 此版本为无线连接手机测试
+
+# 通过wifi链接手机做自动化步骤：
+
+# 1、手机用USB线连接到电脑，在终端中，输入adb devices，查询连接设备的名称。华为mate20的udid：DXT0217A23003150
+
+# 2、开启端口（端口不能被占用），输入adb -s DXT0217A23003150 tcpip 8899
+
+# 3、将电脑和目标手机链接到同一wifi下， 在手机中查看ip：192.168.1.37
+
+# 4、在终端中输入adb connect 192.168.1.37:8899
+
+# 5、连接上后就可以拔掉USB线了，查看连接状态，输入adb devices，显示的设备udid应为192.168.1.37:8899
+
+# 6、将脚本中的udid改为192.168.1.37:8899
+
+# 7.获取app的ID：adb shell dumpsys activity activities | grep real

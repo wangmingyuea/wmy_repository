@@ -1,0 +1,70 @@
+1、导入包时，import 。。。要放在导入类库之后：
+# 导入appium类库
+from appium.webdriver.webdriver import WebDriver
+
+# 导入随机数的包
+import random
+
+
+2、循环体要进行缩进，不能和for平级：
+for i in range(0,3):
+    exresult = int(x)+int(y)
+    driver.find_element_by_id('com.android.calculator2:id/digit_'+str(x)).click()
+    driver.find_element_by_id('com.android.calculator2:id/op_add').click()
+    driver.find_element_by_id('com.android.calculator2:id/digit_'+str(y)).click()
+    driver.find_element_by_id('com.android.calculator2:id/eq').click()
+    # 获取运行结果
+    result=driver.find_element_by_id('com.android.calculator2:id/formula').text
+    # print(result)
+    # 进行结果比对
+    if(int(result) == int(exresult)):
+        print(str(x)+'+'+str(y)+'测试通过')
+    else:
+        print(str(x)+'+'+str(y)+'测试失败')
+
+
+3、command+/ 可以多行注释
+
+4、查看当前启动的APP对应的包名和活动程序名称：
+  cmd:adb shell dumpsys activity activities | findstr mFocusedActivity
+  iTerm2:adb shell dumpsys activity activities | grep real
+
+5、文件读取与测试：
+# 导入csv对象库
+import csv
+# csv对象库测试：进行文件的读取
+file = open("/Users/daizhiwei/PycharmProjects/test1/testdata.csv","r")
+table = csv.reader(file)
+for row in table:
+    print("第一列"+row[0])
+    print("第二列"+row[1])
+    print("第三列"+row[2])
+
+
+6、shift+tab键可以取消缩进
+
+
+7、appium配置安卓和Java路径时需要用绝对路径
+
+
+8、工作任务拆分：
+a.明确自动化测试范围;
+b.确认测试目标;
+c.制定任务单;
+d.逐步开展工作。
+
+
+9、工作任务明确：
+   使用频率最高的功能；
+   功能+兼容+压力测试；
+   独立功能脚本+业务场景脚本；
+   迭代开发+面向对象。
+
+
+
+10、智能等待
+
+
+11、appium-webdriver存储位置：
+/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac
+
