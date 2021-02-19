@@ -1,10 +1,5 @@
 
-'''
-created on 2020-06-22
-author: daizhiwei
-安心保-万元出行意外险免费领取（无到期时间）
-https://m.95303.com/mk/yxv/jtgj322/login/UKWH5TOBAJ16J?param1=UKWH5TOBAJ16J-1
-'''
+
 import unittest
 import warnings
 
